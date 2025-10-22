@@ -138,7 +138,7 @@ void insertItem(Node** root, Node** lastNode, int key) {
 
 // 힙에서 아이템을 제거하고 값을 반환
 int deleteItem(Node** root, Node** lastNode) {
-	if (*root == NULL) return -404;
+	if (isExternal(*root)) return -404;
 
 	int key = (*root)->key;
 
